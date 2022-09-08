@@ -1,0 +1,25 @@
+@use "../custom.scss" as *;
+
+@keyframes appear-left {
+  from {
+    transform: translateX(-75%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes appear-right {
+  from {
+    transform: translateX(75%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}

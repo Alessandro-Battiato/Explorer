@@ -1,0 +1,511 @@
+@use "../custom.scss" as *;
+.prices-section {
+  @media only screen and (min-width: 1430px) {
+    background-color: $primary-medium;
+    padding-bottom: 6rem;
+    border-bottom: 8px solid rgba($secondary, 0.9);
+  }
+  @media only screen and (max-width: 1429px) {
+    background-color: $primary-medium;
+    padding-bottom: 30rem;
+    border-bottom: 8px solid rgba($secondary, 0.9);
+  }
+}
+
+.title-container {
+  @media only screen and (min-width: 1430px) {
+    text-align: center;
+    padding-top: 8rem;
+    margin-bottom: 8rem;
+  }
+  @media only screen and (max-width: 1429px) {
+    text-align: center;
+    padding-top: 6rem;
+    margin-bottom: 6rem;
+  }
+}
+
+.packages {
+  @media only screen and (min-width: 1430px) {
+    display: grid;
+    grid-template-columns: 25rem 25rem 25rem;
+    justify-content: center;
+    grid-gap: 7rem;
+  }
+  @media only screen and (max-width: 1429px) {
+    display: grid;
+    grid-template-columns: 28rem;
+    grid-gap: 30rem;
+    justify-content: center;
+  }
+  @media only screen and (max-width: 767px) {
+    display: grid;
+    grid-template-columns: 19rem;
+    grid-gap: 30rem;
+    justify-content: center;
+  }
+}
+
+.card {
+  @media only screen and (min-width: 1430px) {
+    background-color: transparent;
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+    position: relative;
+    height: 30rem;
+    border: none;
+
+    &__side {
+      height: 30rem;
+      transition: all 0.8s ease;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      z-index: 1030;
+      border-radius: 0.25rem;
+      overflow: hidden;
+      box-shadow: 0 1.5rem 4rem rgba($black, 0.2);
+
+      &--front {
+        background-image: linear-gradient(60deg, $primary-medium, $white);
+      }
+
+      &--back {
+        transform: rotateY(180deg);
+
+        &-1 {
+          background-image: linear-gradient(
+            to right bottom,
+            $silver,
+            $primary-light
+          );
+        }
+
+        &-2 {
+          background-image: linear-gradient(
+            to right bottom,
+            $gold,
+            $primary-light
+          );
+        }
+
+        &-3 {
+          background-image: linear-gradient(
+            to right bottom,
+            $amethyst,
+            $primary-light
+          );
+        }
+      }
+    }
+
+    &:hover &__side--front {
+      transform: rotateY(-180deg);
+    }
+
+    &:hover &__side--back {
+      transform: rotateY(0);
+    }
+
+    &__picture {
+      background-size: cover;
+      height: 14rem;
+      background-blend-mode: screen;
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+      border-top-left-radius: 1px;
+      border-top-right-radius: 1px;
+      background-image: linear-gradient(
+          to right bottom,
+          $primary-dark,
+          $primary-light
+        ),
+        url(../../images/beautiful-shot-torres-del-paine-national-park-magallanes-region-chile.jpg);
+    }
+    &__rating {
+      font-size: 2.5rem;
+      font-weight: 300;
+      text-transform: uppercase;
+      text-align: right;
+      position: absolute;
+      top: 8rem;
+      left: 5rem;
+      color: $white;
+      width: 75%;
+    }
+
+    &__rating-span {
+      &--1 {
+        background-image: linear-gradient(
+          to right bottom,
+          rgba($silver, 0.85),
+          rgba($primary-light, 0.45)
+        );
+      }
+
+      &--2 {
+        background-image: linear-gradient(
+          to right bottom,
+          rgba($gold, 0.85),
+          rgba($primary-light, 0.45)
+        );
+      }
+
+      &--3 {
+        background-image: linear-gradient(
+          to right bottom,
+          rgba($secondary, 0.85),
+          rgba($amethyst, 0.5)
+        );
+      }
+    }
+
+    &__description {
+      padding: 3rem;
+    }
+
+    &__ul {
+      list-style: none;
+      width: 85%;
+      margin: 0;
+    }
+
+    &__li {
+      text-align: center;
+      font-size: 1.15rem;
+      padding: 1rem;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid $amethyst;
+      }
+    }
+
+    &__cta {
+      position: absolute;
+      top: 14rem;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 90%;
+      text-align: center;
+    }
+
+    &__price-box {
+      text-align: center;
+      color: $white;
+      margin-bottom: 3.5rem;
+    }
+
+    &__price-only {
+      font-size: 1rem;
+      text-transform: uppercase;
+    }
+
+    &__price-value {
+      font-size: 5.5rem;
+      font-family: sans-serif;
+      font-weight: 300;
+    }
+  }
+  @media only screen and (max-width: 1429px) {
+    height: 20rem;
+    border: none;
+    background-color: transparent;
+    -webkit-box-shadow: 0 1.5rem 4rem rgba($black, 0.1);
+    box-shadow: 0 1.5rem 4rem rgba($black, 0.1);
+
+    &__side {
+      height: auto;
+      position: relative;
+      border-radius: 0.25rem;
+      -webkit-box-shadow: 0 1.5rem 4rem rgba($black, 0.1);
+      box-shadow: 0 1.5rem 4rem rgba($black, 0.1);
+
+      &--front {
+        background-image: linear-gradient(60deg, $primary-medium, $white);
+      }
+
+      &--back {
+        -webkit-transform: rotateY(0);
+        transform: rotateY(0);
+        -webkit-clip-path: polygon(0 15%, 100% 0%, 100% 100%, 0% 100%);
+        clip-path: polygon(0 15%, 100% 0%, 100% 100%, 0% 100%);
+        height: 17rem;
+        bottom: 2.5rem;
+
+        &-1 {
+          background-image: linear-gradient(
+            to right bottom,
+            $silver,
+            $primary-light
+          );
+        }
+
+        &-2 {
+          background-image: linear-gradient(
+            to right bottom,
+            $gold,
+            $primary-light
+          );
+        }
+
+        &-3 {
+          background-image: linear-gradient(
+            to right bottom,
+            $amethyst,
+            $primary-light
+          );
+        }
+      }
+    }
+    &__picture {
+      background-size: cover;
+      height: 13rem;
+      background-blend-mode: screen;
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+      border-top-left-radius: 1px;
+      border-top-right-radius: 1px;
+      background-image: linear-gradient(
+          to right bottom,
+          $primary-dark,
+          $primary-light
+        ),
+        url(../../images/beautiful-shot-torres-del-paine-national-park-magallanes-region-chile.jpg);
+    }
+    &__rating {
+      font-size: 2.2rem;
+      font-weight: 300;
+      text-transform: uppercase;
+      text-align: right;
+      position: absolute;
+      top: 7.5rem;
+      left: 6rem;
+      color: $white;
+      width: 75%;
+    }
+
+    &__rating-span {
+      &--1 {
+        background-image: linear-gradient(
+          to right bottom,
+          rgba($silver, 0.85),
+          rgba($primary-light, 0.45)
+        );
+      }
+
+      &--2 {
+        background-image: linear-gradient(
+          to right bottom,
+          rgba($gold, 0.85),
+          rgba($primary-light, 0.45)
+        );
+      }
+
+      &--3 {
+        background-image: linear-gradient(
+          to right bottom,
+          rgba($secondary, 0.85),
+          rgba($amethyst, 0.5)
+        );
+      }
+    }
+    &__description {
+      padding: 1.5rem;
+    }
+
+    &__ul {
+      list-style: none;
+      width: 85%;
+      margin: 1rem;
+    }
+
+    &__li {
+      text-align: center;
+      font-size: 1.15rem;
+      padding: 1rem;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid $amethyst;
+      }
+    }
+    &__cta {
+      position: relative;
+      text-align: center;
+      top: 0%;
+      left: 0%;
+      -webkit-transform: translate(0);
+      transform: translate(0);
+      width: 100%;
+      padding: 3rem 2rem 2rem 2rem;
+    }
+
+    &__price-box {
+      color: $white;
+    }
+
+    &__price-only {
+      font-size: 1rem;
+      text-transform: uppercase;
+    }
+
+    &__price-value {
+      font-size: 3.6rem;
+      margin-bottom: 2rem;
+      font-family: sans-serif;
+      font-weight: 300;
+    }
+  }
+  @media only screen and (max-width: 767px) {
+    height: 10rem;
+    border: none;
+    background-color: transparent;
+    -webkit-box-shadow: 0 1.5rem 4rem rgba($black, 0.1);
+    box-shadow: 0 1.5rem 4rem rgba($black, 0.1);
+
+    &__side {
+      height: auto;
+      position: relative;
+      border-radius: 0.25rem;
+      -webkit-box-shadow: 0 1.5rem 4rem rgba($black, 0.1);
+      box-shadow: 0 1.5rem 4rem rgba($black, 0.1);
+
+      &--front {
+        background-image: linear-gradient(60deg, $primary-medium, $white);
+      }
+
+      &--back {
+        -webkit-transform: rotateY(0);
+        transform: rotateY(0);
+        -webkit-clip-path: polygon(0 15%, 100% 0%, 100% 100%, 0% 100%);
+        clip-path: polygon(0 15%, 100% 0%, 100% 100%, 0% 100%);
+        height: 11rem;
+        bottom: 2rem;
+
+        &-1 {
+          background-image: linear-gradient(
+            to right bottom,
+            $silver,
+            $primary-light
+          );
+        }
+
+        &-2 {
+          background-image: linear-gradient(
+            to right bottom,
+            $gold,
+            $primary-light
+          );
+        }
+
+        &-3 {
+          background-image: linear-gradient(
+            to right bottom,
+            $amethyst,
+            $primary-light
+          );
+        }
+      }
+    }
+    &__picture {
+      background-size: cover;
+      height: 11rem;
+      background-blend-mode: screen;
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+      border-top-left-radius: 1px;
+      border-top-right-radius: 1px;
+      background-image: linear-gradient(
+          to right bottom,
+          $primary-dark,
+          $primary-light
+        ),
+        url(../../images/beautiful-shot-torres-del-paine-national-park-magallanes-region-chile.jpg);
+    }
+    &__rating {
+      font-size: 1.8rem;
+      font-weight: 300;
+      text-transform: uppercase;
+      text-align: right;
+      position: absolute;
+      top: 6.5rem;
+      left: 4rem;
+      color: $white;
+      width: 75%;
+    }
+
+    &__rating-span {
+      &--1 {
+        background-image: linear-gradient(
+          to right bottom,
+          rgba($silver, 0.85),
+          rgba($primary-light, 0.45)
+        );
+      }
+
+      &--2 {
+        background-image: linear-gradient(
+          to right bottom,
+          rgba($gold, 0.85),
+          rgba($primary-light, 0.45)
+        );
+      }
+
+      &--3 {
+        background-image: linear-gradient(
+          to right bottom,
+          rgba($secondary, 0.85),
+          rgba($amethyst, 0.5)
+        );
+      }
+    }
+    &__description {
+      padding-top: 0.5rem;
+      padding-bottom: 2rem;
+    }
+
+    &__ul {
+      list-style: none;
+      width: 80%;
+      margin: 0.7rem;
+    }
+
+    &__li {
+      text-align: center;
+      font-size: 1rem;
+      padding: 1rem;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid $amethyst;
+      }
+    }
+    &__cta {
+      position: relative;
+      text-align: center;
+      top: 0%;
+      left: 0%;
+      -webkit-transform: translate(0);
+      transform: translate(0);
+      width: 100%;
+      padding-top: 1.3rem;
+    }
+
+    &__price-box {
+      color: $white;
+    }
+
+    &__price-only {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+    }
+
+    &__price-value {
+      font-size: 2.5rem;
+      font-family: sans-serif;
+      font-weight: 300;
+      margin-bottom: 1rem;
+    }
+  }
+}

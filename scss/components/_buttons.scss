@@ -1,0 +1,110 @@
+@use "../custom.scss" as *;
+.button {
+  @media only screen and (min-width: 1430px) {
+    font-size: 1.5rem;
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    color: $white;
+    padding: 1rem 2.2rem;
+    border: 2px solid $white;
+    border-radius: 0.2rem;
+    border-color: $white;
+    background-image: -webkit-linear-gradient(
+      45deg,
+      $light-white 50%,
+      transparent 50%
+    );
+    background-image: linear-gradient(45deg, $light-white 50%, transparent 50%);
+    background-position: 100%;
+    background-size: 400%;
+    -webkit-transition: background 300ms ease-in-out;
+    transition: background 300ms ease-in-out;
+
+    &:hover {
+      background-position: 0;
+      color: $white;
+      outline: 0;
+    }
+  }
+  @media only screen and (max-width: 1429px) {
+    font-size: 1rem;
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    color: $white;
+    padding: 1rem 1.5rem;
+    border: 2px solid $white;
+    border-radius: 0.2rem;
+    border-color: $white;
+    background-image: -webkit-linear-gradient(
+      45deg,
+      $light-white 50%,
+      transparent 50%
+    );
+    background-image: linear-gradient(45deg, $light-white 50%, transparent 50%);
+    background-position: 100%;
+    background-size: 400%;
+    -webkit-transition: background 300ms ease-in-out;
+    transition: background 300ms ease-in-out;
+
+    &:hover {
+      background-position: 0;
+      color: $white;
+      outline: 0;
+    }
+  }
+  @media only screen and (max-width: 767px) {
+    font-size: 0.8rem;
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    color: $white;
+    border: 2px solid $white;
+    border-radius: 0.2rem;
+    border-color: $white;
+    background-image: -webkit-linear-gradient(
+      45deg,
+      $light-white 50%,
+      transparent 50%
+    );
+    background-image: linear-gradient(45deg, $light-white 50%, transparent 50%);
+    background-position: 100%;
+    background-size: 400%;
+    -webkit-transition: background 300ms ease-in-out;
+    transition: background 300ms ease-in-out;
+
+    &:hover {
+      background-position: 0;
+      color: $white;
+      outline: 0;
+    }
+  }
+}
+
+.button--form {
+  background-image: -webkit-linear-gradient(
+    45deg,
+    $primary-medium 50%,
+    transparent 50%
+  );
+  background-image: linear-gradient(
+    45deg,
+    $primary-medium 50%,
+    transparent 50%
+  );
+
+  &:hover {
+    background-position: 0;
+    color: rgba($black, 0.6);
+    outline: 0;
+  }
+
+  @media only screen and (min-width: 1430px) {
+    color: $primary-dark;
+    border: 3px solid $primary-dark;
+    border-color: $primary-medium;
+  }
+  @media only screen and (max-width: 1429px) {
+    color: rgba($black, 0.5);
+    border: 3px solid;
+    border-color: $primary-medium;
+  }
+}

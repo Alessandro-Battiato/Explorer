@@ -1,0 +1,57 @@
+@use "../custom.scss" as *;
+
+.hero-search {
+  border-bottom: 8px solid $secondary;
+  display: flex;
+  position: relative;
+  justify-content: center;
+}
+
+.img {
+  width: 100%;
+}
+
+.search-bar {
+  display: inline-flex;
+  position: absolute;
+  animation: appear-right ease-out 1.65s;
+}
+
+.input-search {
+  border-radius: 2rem;
+  border: 0.1rem solid $white;
+  outline: none;
+}
+
+.icon-container {
+  position: absolute;
+  color: $primary-light;
+}
+
+.results-container {
+  position: absolute;
+  display: inline;
+  border-radius: 1rem;
+  background-color: $white;
+  -webkit-box-shadow: 0.5rem 0.1rem 1rem rgba($black, 0.6);
+  box-shadow: 0.5rem 0.1rem 1rem rgba($black, 0.6);
+}
+
+.hide {
+  display: none;
+}
+
+.results {
+  padding-left: 0.5rem;
+}
+
+.list:hover {
+  background-color: $primary-medium;
+  cursor: pointer;
+  border-radius: 0.3rem;
+  transition: all 0.15s;
+}
+
+.list:nth-last-child(1) {
+  margin-bottom: 0.5rem;
+}

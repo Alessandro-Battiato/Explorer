@@ -1,0 +1,46 @@
+@use "../custom.scss" as *;
+
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow-y: scroll;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.navbar {
+  font-family: "Poppins", sans-serif;
+  background-color: $primary-light;
+  padding-top: 0rem;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+}
+
+.navbar-brand {
+  padding-top: 0.65rem;
+  padding-bottom: 0;
+  background-image: url("/images/—Pngtree—business\ logo\ design\ free\ logo_915991.png");
+  background-size: cover;
+  height: auto;
+  background-position-y: -6.9%;
+  background-position-x: -0.25rem;
+  background-repeat: no-repeat;
+}
+
+.navbar-collapse {
+  flex-grow: 0.005;
+  padding-top: 1.2rem;
+}
+
+.navbar-toggler {
+  color: $primary-dark !important;
+}
+
+.nav-item {
+  margin-right: 2rem;
+}

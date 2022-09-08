@@ -1,0 +1,39 @@
+@use "../custom.scss" as *;
+.footer {
+  background-color: rgba($black, 0.8);
+  padding: 7rem 0;
+  font-size: 2rem;
+  color: $white;
+
+  &__logo-box {
+    text-align: center;
+    margin-bottom: 10rem;
+  }
+  &__logo {
+    background-image: url(../../images/—Pngtree—business\ logo\ design\ free\ logo_915991.png);
+    background-repeat: no-repeat;
+    background-position-x: 49.5%;
+    background-position-y: 4%;
+    background-size: 25rem;
+    padding: 5rem;
+  }
+
+  &__details-box {
+    max-width: 50rem;
+    margin: 0 auto;
+  }
+}
+
+.footer__list-container {
+  border-top: 1px solid $primary-medium;
+  padding-top: 1.5rem;
+  display: block;
+}
+
+.footer__item {
+  display: inline-block;
+}
+
+.footer__item:not(:last-child) {
+  margin-right: 2rem;
+}

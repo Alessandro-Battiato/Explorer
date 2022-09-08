@@ -1,0 +1,157 @@
+@use "../custom.scss" as *;
+
+.newsletter-section {
+  border-bottom: 8px solid $secondary;
+  @media only screen and (min-width: 1430px) {
+    background-color: $primary-medium;
+    padding: 10rem 0;
+  }
+  @media only screen and (max-width: 1429px) {
+    background-color: $primary-medium;
+    padding: 5rem 0;
+  }
+}
+
+.news__form--container {
+  @media only screen and (min-width: 1430px) {
+    max-width: 90rem;
+    margin: 0 auto;
+  }
+  @media only screen and (max-width: 1429px) {
+    max-width: 35rem;
+    margin: 0 auto;
+  }
+}
+
+.news {
+  @media only screen and (min-width: 1430px) {
+    background-image: linear-gradient(
+        105deg,
+        rgba($white, 0.9) 0%,
+        rgba($white, 0.8) 50%,
+        transparent 50%
+      ),
+      url(../../images/mountain-2.webp);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border-radius: 0.3rem;
+    -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
+  }
+  @media only screen and (max-width: 1429px) {
+    background-image: linear-gradient(
+        to right,
+        rgba($white, 0.5) 100%,
+        transparent 50%
+      ),
+      url(../../images/mountain-2.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 0.3rem;
+    -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
+  }
+}
+
+.news__form {
+  @media only screen and (min-width: 1430px) {
+    width: 50%;
+    padding: 5rem 6rem 5rem;
+  }
+  @media only screen and (max-width: 1429px) {
+    width: 60%;
+    padding: 5rem 0rem;
+    margin: auto;
+  }
+}
+
+.form {
+  @media only screen and (min-width: 1430px) {
+    &__group:not(:last-child) {
+      margin-bottom: 2rem;
+      margin-top: 1.5rem;
+    }
+
+    &__input {
+      font-size: 1.3rem;
+      font-family: "Poppins", sans-serif;
+      padding: 1rem 1rem;
+      border-radius: 0.2rem;
+      border: none;
+      background-color: rgba($primary-medium, 0.5);
+      border-bottom: 3px solid transparent;
+      width: 90%;
+      display: block;
+      transition: all 0.3s;
+
+      &:focus {
+        outline: none;
+        border-bottom: 3px solid $secondary;
+      }
+
+      &::-webkit-input-placeholder {
+        color: rgba(black, 0.6);
+      }
+    }
+
+    &__label {
+      font-size: 1.3rem;
+      margin-left: 1rem;
+      margin-top: 0.7rem;
+      display: block;
+      transition: all 0.3s;
+    }
+
+    &__input:placeholder-shown + &__label {
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-4rem);
+    }
+  }
+  @media only screen and (max-width: 1429px) {
+    &__group:not(:last-child) {
+      margin-bottom: -0.5rem;
+      margin-top: 0.5rem;
+    }
+
+    &__input {
+      font-size: 1rem;
+      font-family: "Poppins", sans-serif;
+      padding: 1rem 1rem;
+      border-radius: 0.2rem;
+      border: none;
+      background-color: rgba($primary-medium, 0.5);
+      border-bottom: 3px solid transparent;
+      width: 90%;
+      display: block;
+      transition: all 0.3s;
+
+      &:focus {
+        outline: none;
+        border-bottom: 3px solid $secondary;
+      }
+
+      &::-webkit-input-placeholder {
+        color: rgba(black, 0.6);
+      }
+    }
+
+    &__label {
+      font-size: 1.1rem;
+      margin-left: 1rem;
+      margin-top: 0.7rem;
+      display: block;
+      transition: all 0.3s;
+    }
+
+    &__input:placeholder-shown + &__label {
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-4rem);
+    }
+  }
+}
+
+.form__sub {
+  margin-top: 2rem;
+}
